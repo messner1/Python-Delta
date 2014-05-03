@@ -82,7 +82,7 @@ class individualText:
 		#outfile.write('\n' + self + " " + self.zDict + '\n')
 
 		
-	def compareZScore(self, compareText): # HERE not working it seems, but only at high feature sets. this might be because at like 500 features "lapham" starts showing up as a feature in the main corpus. so culling/text selection (ie make the potential author corpuses like 5 works so that it drowns out common names hopefully)?
+	def compareZScore(self, compareText):
 		testZMean = 0
 		for feature in self.zDict:
 			testZMean += abs(self.zDict[feature] - compareText.zDict[feature])
